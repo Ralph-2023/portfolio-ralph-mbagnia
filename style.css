@@ -1,0 +1,116 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+/* Navigation */
+header {
+  background-color: #111;
+  padding: 15px 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav a:hover, nav a.active {
+  color: #00bcd4;
+}
+
+/* Section accueil */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+.photo-profil {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 2.2em;
+  margin: 10px 0;
+}
+h2 {
+  color: #555;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.accroche {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.5;
+}
+.boutons {
+  margin-bottom: 20px;
+}
+.btn, .btn-secondaire {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin: 5px;
+  transition: all 0.3s;
+}
+.btn {
+  background-color: #00bcd4;
+  color: white;
+}
+.btn:hover {
+  background-color: #0097a7;
+}
+.btn-secondaire {
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+}
+.btn-secondaire:hover {
+  background-color: #00bcd4;
+  color: white;
+}
+.liens-sociaux a {
+  color: #00bcd4;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  background: white;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
