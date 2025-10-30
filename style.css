@@ -340,8 +340,8 @@ section, .hero {
 
 /* Taille et alignement parfait des logos */
 .icon-btn {
-  width: 22px;      /* 🔹 taille augmentée */
-  height: 22px;     /* 🔹 taille augmentée */
+  width: 28px;      /* 🔹 taille augmentée */
+  height: 28px;     /* 🔹 taille augmentée */
   display: inline-block;
   margin-right: 6px;
   position: relative;
