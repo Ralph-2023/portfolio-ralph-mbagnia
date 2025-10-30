@@ -601,3 +601,62 @@ section, .hero {
                  0 0 50px rgba(0, 229, 255, 0.3);
   }
 }
+
+/* === ALIGNEMENT CENTRAL DES BOUTONS ET LIENS SOCIAUX === */
+.boutons,
+.liens-sociaux {
+  display: flex;
+  justify-content: center;  /* centre horizontalement */
+  align-items: center;       /* centre verticalement */
+  gap: 20px;                 /* espace entre les éléments */
+  flex-wrap: wrap;           /* s’adapte sur mobile */
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* === STYLE DES BOUTONS === */
+.btn {
+  background-color: var(--accent-color);
+  color: #000;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+}
+
+/* === STYLE DU BOUTON SECONDAIRE === */
+.btn-secondaire {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondaire:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+  background-color: rgba(0, 229, 255, 0.1);
+}
+
+/* === LIENS SOCIAUX (GitHub, LinkedIn, Email) === */
+.liens-sociaux a {
+  color: var(--accent-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.liens-sociaux a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px var(--accent-color);
+}
+
