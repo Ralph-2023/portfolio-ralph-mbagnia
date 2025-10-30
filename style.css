@@ -126,14 +126,17 @@ h2 {
   .boutons {
     flex-direction: column;
     gap: 15px;
+  }
 }
 
+/* === LIENS SOCIAUX === */
 .liens-sociaux a {
   color: #00e5ff;
   text-decoration: none;
   margin: 0 12px;
   transition: 0.3s;
 }
+
 .liens-sociaux a:hover {
   color: #80deea;
 }
