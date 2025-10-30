@@ -232,3 +232,28 @@ section, .hero {
   border-radius: 20px;
   margin: 0 5px;
 }
+
+/* === BANNIÈRE PROJET === */
+.banner {
+  width: 100%;
+  background: linear-gradient(135deg, #00bcd4, #006064);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+}
+
+.banner h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.banner h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 10px;
+  color: #e0f7fa;
+}
