@@ -326,11 +326,26 @@ section, .hero {
 .icon-btn {
   width: 18px;
   height: 18px;
-  vertical-align: middle;
   margin-right: 8px;
+  position: relative;
+  top: 3px; /* 🔥 ajuste la hauteur du logo */
   filter: brightness(0) invert(1);
   transition: transform 0.3s ease;
 }
+
+.btn-contact {
+  display: inline-flex;
+  align-items: center; /* 🔥 centre le logo et le texte verticalement */
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
 
 .btn-contact:hover .icon-btn {
   transform: scale(1.1);
