@@ -264,8 +264,8 @@ section, .hero {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 10px; /* Réduit l’espace entre les titres */
-    padding: 0 5px; /* Diminue les marges internes */
+    gap: 5px; /* Réduit l’espace entre les titres */
+    padding: 0 2px; /* Diminue les marges internes */
     margin: 0;
     overflow-x: hidden;
   }
