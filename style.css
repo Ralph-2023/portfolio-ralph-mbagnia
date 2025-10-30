@@ -416,3 +416,31 @@ section, .hero {
   color: var(--accent-color); /* même bleu que Compétences et Contact */
 }
 
+/* === EFFET DE SOULIGNEMENT LUMINEUX SUR LES TITRES === */
+#projets h2,
+#certifications h2 {
+  color: var(--accent-color);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+#projets h2::after,
+#certifications h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #00e5ff, #0077b5, #00e5ff);
+  border-radius: 3px;
+  transition: width 0.6s ease-in-out;
+}
+
+/* Animation au survol */
+#projets h2:hover::after,
+#certifications h2:hover::after {
+  width: 100%;
+  box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+}
