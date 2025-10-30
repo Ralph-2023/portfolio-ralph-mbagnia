@@ -1,22 +1,56 @@
+/* 🌙 Thème sombre élégant - Ralph Mbagnia Portfolio */
+/* Import de la police Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* === VARIABLES GLOBALES === */
+/* Variables globales du thème */
 :root {
-  --accent-color: #00e5ff;
-  --background-color: #0a0a0f;
-  --text-color: #ffffff;
+  --accent-color: #00e5ff;    /* Bleu néon principal */
+  --bg-color: #0a0a0f;        /* Couleur de fond principale (très sombre) */
+  --secondary-color: #151520; /* Couleur de fond secondaire (cartes, listes) */
 }
 
-/* === STRUCTURE GÃ‰NÃ‰RALE === */
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-color);
+  color: #e0e0e0;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-/* === SECTION HERO === */
+/* Navigation (Header) */
+header {
+  background: #0f0f15;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 15px 0;
+}
+nav li {
+  /* Sur mobile, chaque lien occupera toute la largeur (voir media queries) */
+}
+nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  padding: 5px 8px;
+}
+nav a:hover,
+nav a.active {
+  color: var(--accent-color);
+}
+
+/* Section Accueil (Hero) */
 .hero {
   display: flex;
   flex-direction: column;
@@ -25,51 +59,42 @@ body {
   text-align: center;
   padding: 100px 20px;
 }
-
-.hero img.photo-profil {
-  width: 150px;
-  height: 150px;
+.photo-profil {
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   border: 3px solid var(--accent-color);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
+  object-fit: cover;
+  margin-bottom: 25px;
+}
+h1 {
+  font-size: 2.4em;
+  margin: 10px 0;
+  color: #fff;
+}
+h2 {
+  color: #aaa;
+  font-weight: 500;
   margin-bottom: 20px;
 }
-
-.glow-text {
-  color: var(--accent-color);
-  text-shadow: 0 0 10px rgba(0, 229, 255, 0.5), 0 0 20px rgba(0, 229, 255, 0.3);
-  opacity: 0;
-  animation: glowFadeIn 3s ease forwards, glowPulse 4s ease-in-out 3s infinite;
+.accroche {
+  max-width: 650px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+  color: #ccc;
 }
 
-.glow-subtitle {
-  color: #fff;
-  opacity: 0;
-  animation: glowFadeIn 3s ease forwards, glowPulse 4s ease-in-out 4s infinite;
-  animation-delay: 0.8s;
-}
-
-@keyframes glowFadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  50% { opacity: 0.8; transform: translateY(0); }
-  100% { opacity: 1; }
-}
-
-@keyframes glowPulse {
-  0%, 100% { text-shadow: 0 0 15px rgba(0, 229, 255, 0.3); }
-  50% { text-shadow: 0 0 25px rgba(0, 229, 255, 0.6); }
-}
-
-/* === BOUTONS === */
+/* Boutons principaux (Accueil) */
 .boutons {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;      /* Les boutons passent à la ligne en mobile si nécessaire */
   gap: 25px;
-  margin: 40px 0 25px 0;
-  flex-wrap: wrap;
+  margin: 40px 0 25px 0;/* marge: 40px en haut (espace avec texte au-dessus) et 25px en bas */
   text-align: center;
 }
-
 .btn,
 .btn-secondaire {
   display: inline-block;
@@ -77,28 +102,26 @@ body {
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
   font-size: 1rem;
+  transition: all 0.3s ease;
 }
-
+/* Bouton principal (plein) */
 .btn {
   background-color: var(--accent-color);
-  color: #000;
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+  color: #000;  /* texte noir pour un contraste maximal sur le bleu clair */
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);  /* halo néon doux */
 }
-
 .btn:hover {
-  background-color: #00bcd4;
+  background-color: #00bcd4; /* bleu un peu plus foncé au survol */
   box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
   transform: translateY(-2px);
 }
-
+/* Bouton secondaire (outline) */
 .btn-secondaire {
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
   background-color: transparent;
 }
-
 .btn-secondaire:hover {
   background-color: var(--accent-color);
   color: #000;
@@ -106,94 +129,382 @@ body {
   transform: translateY(-2px);
 }
 
-/* === LIENS SOCIAUX === */
+/* Liens sociaux (GitHub, LinkedIn, etc. dans Accueil) */
 .liens-sociaux {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 25px;
   margin-top: 25px;
-  flex-wrap: wrap;
+  text-align: center;
 }
-
 .liens-sociaux a {
   color: var(--accent-color);
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-
 .liens-sociaux a:hover {
   color: #fff;
   text-shadow: 0 0 10px var(--accent-color);
 }
 
-/* === CARROUSEL CERTIFICATIONS === */
-.section-certifications {
-  text-align: center;
-  margin-top: 80px;
+/* Sections génériques */
+section {
+  padding: 70px 25px;
+  max-width: 900px;
+  margin: auto;
 }
-
-.section-certifications h2 {
+section h2 {
   color: var(--accent-color);
-  font-size: 1.8rem;
-  margin-bottom: 40px;
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
-
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: calc(100% * 7);
-  animation: slide 70s linear infinite;
+/* Effet de soulignement lumineux sous les titres de section (Projets, Certifications) */
+section h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
   overflow: hidden;
 }
-
-.carousel:hover {
-  animation-play-state: paused;
-  cursor: pointer;
+section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #00e5ff, #0077b5, #00e5ff);
+  border-radius: 3px;
+  opacity: 0;
+  transition: width 1s ease, opacity 0.5s ease;
+}
+/* Animation du soulignement au survol */
+section h2:hover::after {
+  width: 100%;
+  opacity: 1;
+  box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
 }
 
-.carousel img {
-  width: 250px;
-  height: auto;
-  margin: 0 25px;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-  object-fit: contain;
+/* Animation d’apparition douce des sections (fade-in-up) */
+section, .hero {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
 }
-
-.carousel img:hover {
-  transform: scale(1.05);
-}
-
-@keyframes slide {
-  0% { transform: translateX(0); }
-  14% { transform: translateX(0); }
-  20% { transform: translateX(-100%); }
-  34% { transform: translateX(-100%); }
-  40% { transform: translateX(-200%); }
-  54% { transform: translateX(-200%); }
-  60% { transform: translateX(-300%); }
-  74% { transform: translateX(-300%); }
-  80% { transform: translateX(-400%); }
-  94% { transform: translateX(-400%); }
-  100% { transform: translateX(-600%); }
-}
-
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  .carousel img {
-    width: 180px;
-    margin: 0 15px;
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+/* Section Compétences & Projets – listes */
+#competences ul,
+#projets ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#competences li,
+#projets li {
+  background: var(--secondary-color);
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+#competences li:hover,
+#projets li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.1);
+}
+
+/* Section Projets – grille de cartes */
+#projets {
+  text-align: center;
+  margin-top: 4rem;
+}
+#projets h2 {
+  /* (Couleur et soulignement gérés par section h2 plus haut) */
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+.project-card {
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 340px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+.project-img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.project-card h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.project-card p {
+  color: #ccc;
+  font-size: 0.9rem;
+  min-height: 80px;
+  line-height: 1.4;
+}
+.tags {
+  margin-bottom: 0.8rem;
+}
+.tags span {
+  background-color: #222;
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 0 5px;
+}
+
+/* Section Certifications – carrousel */
+#certifications {
+  text-align: center;
+  margin-top: 80px;
+  padding: 60px 20px;
+}
+#certifications h2 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+}
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  background-color: #111;
+}
+.carousel {
+  display: flex;
+  width: calc(100% * 7); /* supposant 7 items dans le carrousel */
+  animation: slide 35s infinite linear;
+}
+.carousel:hover {
+  animation-play-state: paused; /* Pause du défilement au survol */
+  cursor: grab;
+}
+.carousel img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  object-fit: contain;
+  background-color: #111;
+}
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  14%  { transform: translateX(0); }
+  20%  { transform: translateX(-100%); }
+  34%  { transform: translateX(-100%); }
+  40%  { transform: translateX(-200%); }
+  54%  { transform: translateX(-200%); }
+  60%  { transform: translateX(-300%); }
+  74%  { transform: translateX(-300%); }
+  80%  { transform: translateX(-400%); }
+  94%  { transform: translateX(-400%); }
+  100% { transform: translateX(-600%); }
+}
+
+/* Section Contact – liens et boutons */
+#contact h2 {
+  /* même style générique des titres de section */
+}
+#contact a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  /* (La couleur de fond/texte dépend du type de bouton, voir .email-btn, .linkedin-btn) */
+}
+.email-btn {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+.email-btn:hover {
+  background-color: #00acc1;
+  transform: translateY(-3px);
+}
+.linkedin-btn {
+  background-color: #0077b5;
+  color: #fff;
+}
+.linkedin-btn:hover {
+  background-color: #005f87;
+  transform: translateY(-3px);
+}
+
+/* Effets divers au survol et animations supplémentaires */
+/* Effet de glow au survol des boutons de contact */
+.btn-contact:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5),
+              0 0 40px rgba(0, 229, 255, 0.2);
+}
+.linkedin-btn:hover {
+  /* Renforcement spécifique pour LinkedIn (légère variation de couleur déjà gérée ci-dessus) */
+  box-shadow: 0 0 20px rgba(0, 119, 181, 0.5);
+}
+/* Icône des boutons contact */
+.icon-btn {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  margin-right: 6px;
+  position: relative;
+  top: 0;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+.btn-contact:hover .icon-btn {
+  transform: scale(1.1);
+}
+
+/* Apparition fluide des cartes projets et images du carrousel */
+.project-card,
+.carousel img {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out, box-shadow 0.5s ease;
+}
+.project-card.active,
+.carousel img.active {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+}
+/* Effet de zoom léger au survol des cartes projets */
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.3),
+              0 0 40px rgba(0, 229, 255, 0.1);
+  cursor: pointer;
+}
+.project-card img {
+  transition: transform 0.4s ease;
+}
+.project-card:hover img {
+  transform: scale(1.05);
+}
+/* Effet de survol "glow" sur les images du carrousel */
+.carousel img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.4),
+              0 0 60px rgba(0, 229, 255, 0.2);
+  cursor: pointer;
+}
+
+/* Effet d'apparition en glow du texte principal (optionnel, nécessite classes .glow-text sur h1 et .glow-subtitle sur h2) */
+.glow-text {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.5),
+               0 0 20px rgba(0, 229, 255, 0.3),
+               0 0 40px rgba(0, 229, 255, 0.2);
+  opacity: 0;
+  animation: glowFadeIn 3s ease forwards, glowPulse 4s ease-in-out 3s infinite;
+}
+.glow-subtitle {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
+  opacity: 0;
+  animation: glowFadeIn 3s ease forwards, glowPulse 4s ease-in-out 4s infinite;
+  animation-delay: 0.8s;
+}
+@keyframes glowFadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 0 rgba(0, 229, 255, 0);
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 40px rgba(0, 229, 255, 0.7),
+                 0 0 80px rgba(0, 229, 255, 0.3);
+  }
+}
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.3),
+                 0 0 30px rgba(0, 229, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(0, 229, 255, 0.6),
+                 0 0 50px rgba(0, 229, 255, 0.3);
+  }
+}
+
+/* Media Queries – Adaptations mobiles */
+/* Menu et titres plus compacts sur mobile */
+@media (max-width: 768px) {
+  nav ul {
+    justify-content: space-around;
+    gap: 5px;
+    padding: 10px 5px;
+  }
+  nav a {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  nav li {
+    flex: 1;
+    text-align: center;
+  }
+}
+/* Boutons principaux en colonne sur très petit écran */
 @media (max-width: 480px) {
   .boutons {
     flex-direction: column;
     gap: 15px;
   }
 }
-
-💎 Nettoyage et correction complète du CSS
