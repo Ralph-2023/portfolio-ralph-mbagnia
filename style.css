@@ -257,3 +257,86 @@ section, .hero {
   margin-top: 10px;
   color: #e0f7fa;
 }
+
+/* === RESPONSIVE DESIGN - VERSION MOBILE === */
+@media screen and (max-width: 768px) {
+  
+  /* TITRES */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  /* NAVIGATION */
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  /* SECTION ACCUEIL */
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .photo-profil {
+    width: 120px;
+    height: 120px;
+  }
+
+  .accroche {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .boutons a {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  /* SECTION COMPÉTENCES */
+  #competences ul li {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  /* SECTION PROJETS */
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    max-width: 100%;
+    margin: auto;
+    padding: 1.2rem;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card p {
+    font-size: 0.85rem;
+  }
+
+  /* BOUTONS */
+  .btn, .btn-secondaire, .btn-cv {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  /* ESPACEMENT DES SECTIONS */
+  section {
+    padding: 50px 10px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 15px 5px;
+  }
+}
