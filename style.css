@@ -410,12 +410,9 @@ section, .hero {
 }
 
 
-/* === UNIFORMISATION DES TITRES DE SECTIONS === */
-section h2 {
-  color: var(--accent-color); /* même couleur que COMPÉTENCES et CONTACT */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  font-size: 1.8rem;
+/* === TITRES EN BLEU (MES PROJETS + CERTIFICATIONS) === */
+#projets h2,
+#certifications h2 {
+  color: var(--accent-color); /* même bleu que Compétences et Contact */
 }
 
