@@ -375,6 +375,7 @@ section, .hero {
   margin: auto;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  background-color: #111; /* ajoute une base sombre derrière */
 }
 
 .carousel {
@@ -386,9 +387,11 @@ section, .hero {
 .carousel img {
   width: 100%;
   height: auto;
+  max-height: 380px; /* ✅ limite la hauteur du carrousel */
   flex-shrink: 0;
   border-radius: 10px;
-  object-fit: contain;
+  object-fit: contain; /* ✅ garde l’image entière sans la couper */
+  background-color: #111; /* ✅ évite les bords blancs visibles */
 }
 
 /* Animation du carrousel */
@@ -404,4 +407,3 @@ section, .hero {
   85% { transform: translateX(-400%); }
   100% { transform: translateX(-400%); }
 }
-
