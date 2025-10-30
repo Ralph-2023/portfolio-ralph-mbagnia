@@ -547,3 +547,52 @@ section, .hero {
               0 0 60px rgba(0, 229, 255, 0.2);
   cursor: pointer;
 }
+
+
+/* === ANIMATION D’APPARITION NÉON SUR LE TITRE ET SOUS-TITRE === */
+.glow-text {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.5),
+               0 0 20px rgba(0, 229, 255, 0.3),
+               0 0 40px rgba(0, 229, 255, 0.2);
+  opacity: 0;
+  animation: glowFadeIn 3s ease forwards, glowPulse 4s ease-in-out 3s infinite;
+}
+
+.glow-subtitle {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
+  opacity: 0;
+  animation: glowFadeIn 3s ease forwards, glowPulse 4s ease-in-out 4s infinite;
+  animation-delay: 0.8s;
+}
+
+@keyframes glowFadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 0 rgba(0, 229, 255, 0);
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 40px rgba(0, 229, 255, 0.7),
+                 0 0 80px rgba(0, 229, 255, 0.3);
+  }
+}
+
+/* === EFFET DE PULSATION CONTINUE DU NÉON === */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.3),
+                 0 0 30px rgba(0, 229, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(0, 229, 255, 0.6),
+                 0 0 50px rgba(0, 229, 255, 0.3);
+  }
+}
