@@ -148,20 +148,25 @@
   </footer>
 
   <script>
-  // Fonction qui détecte quand les titres deviennent visibles à l’écran
+  // Fonction d'apparition quand un élément devient visible à l'écran
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
       }
     });
-  }, { threshold: 0.6 }); // seuil de 60% visible
+  }, { threshold: 0.3 }); // seuil de visibilité (30%)
 
-  // Cibler les titres concernés
-  document.querySelectorAll('#projets h2, #certifications h2').forEach(title => {
-    observer.observe(title);
-  });
+  // Observer les titres de section
+  document.querySelectorAll('#projets h2, #certifications h2').forEach(el => observer.observe(el));
+
+  // Observer les cartes projets
+  document.querySelectorAll('.project-card').forEach(el => observer.observe(el));
+
+  // Observer les images du carrousel
+  document.querySelectorAll('.carousel img').forEach(el => observer.observe(el));
 </script>
+
   
 </body>
 </html>
