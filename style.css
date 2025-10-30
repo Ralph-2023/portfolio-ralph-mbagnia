@@ -355,3 +355,53 @@ section, .hero {
   transform: scale(1.1);
 }
 
+/* === CARROUSEL CERTIFICATIONS === */
+#certifications {
+  text-align: center;
+  margin-top: 80px;
+  padding: 60px 20px;
+}
+
+#certifications h2 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.carousel {
+  display: flex;
+  width: calc(100% * 5);
+  animation: slide 25s infinite;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+/* Animation du carrousel */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  40% { transform: translateX(-100%); }
+  45% { transform: translateX(-200%); }
+  60% { transform: translateX(-200%); }
+  65% { transform: translateX(-300%); }
+  80% { transform: translateX(-300%); }
+  85% { transform: translateX(-400%); }
+  100% { transform: translateX(-400%); }
+}
+
