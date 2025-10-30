@@ -444,3 +444,36 @@ section, .hero {
   width: 100%;
   box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
 }
+
+/* === ANIMATION AUTOMATIQUE DES SOULIGNEMENTS BLEUS === */
+#projets h2,
+#certifications h2 {
+  color: var(--accent-color);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+  overflow: hidden;
+}
+
+/* Ligne invisible par défaut */
+#projets h2::after,
+#certifications h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #00e5ff, #0077b5, #00e5ff);
+  border-radius: 3px;
+  opacity: 0;
+  transition: width 1s ease, opacity 0.5s ease;
+}
+
+/* Quand le titre devient visible à l’écran */
+#projets h2.active::after,
+#certifications h2.active::after {
+  width: 100%;
+  opacity: 1;
+  box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+}
