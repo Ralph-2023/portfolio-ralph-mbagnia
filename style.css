@@ -387,7 +387,7 @@ section, .hero {
 .carousel img {
   width: 100%;
   height: auto;
-  max-height: 80px; /* ✅ limite la hauteur du carrousel */
+  max-height: 300px; /* ✅ limite la hauteur du carrousel */
   flex-shrink: 0;
   border-radius: 10px;
   object-fit: contain; /* ✅ garde l’image entière sans la couper */
