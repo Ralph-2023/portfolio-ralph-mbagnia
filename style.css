@@ -258,4 +258,26 @@ section, .hero {
   color: #e0f7fa;
 }
 
+/* === ALIGNEMENT DU MENU SUR MOBILE === */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px; /* Réduit l’espace entre les titres */
+    padding: 0 5px; /* Diminue les marges internes */
+    margin: 0;
+    overflow-x: hidden;
+  }
 
+  nav li {
+    flex: 1; /* Donne la même largeur à chaque lien */
+    text-align: center;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px;
+  }
+}
