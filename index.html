@@ -147,5 +147,21 @@
     <p>© 2025 Ralph Mbagnia – Portfolio personnel</p>
   </footer>
 
+  <script>
+  // Fonction qui détecte quand les titres deviennent visibles à l’écran
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.6 }); // seuil de 60% visible
+
+  // Cibler les titres concernés
+  document.querySelectorAll('#projets h2, #certifications h2').forEach(title => {
+    observer.observe(title);
+  });
+</script>
+  
 </body>
 </html>
