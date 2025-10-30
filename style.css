@@ -386,7 +386,12 @@ section, .hero {
 .carousel {
   display: flex;
   width: calc(100% * 7);
-  animation: slide 35s infinite; /* animation plus lente et fluide */
+  animation: slide 90s infinite; /* animation plus lente et fluide */
+}
+
+.carousel:hover {
+  animation-play-state: paused; /* ✅ stoppe l’animation quand on survole */
+  cursor: pointer;
 }
 
 .carousel img {
@@ -398,6 +403,8 @@ section, .hero {
   object-fit: contain; /* ✅ garde l’image entière sans la couper */
   background-color: #111; /* ✅ évite les bords blancs visibles */
 }
+
+animation-timing-function: linear;
 
 /* Animation du carrousel */
 @keyframes slide {
