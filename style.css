@@ -409,3 +409,13 @@ section, .hero {
   100% { transform: translateX(-600%); }
 }
 
+
+/* === UNIFORMISATION DES TITRES DE SECTIONS === */
+section h2 {
+  color: var(--accent-color); /* même couleur que COMPÉTENCES et CONTACT */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
