@@ -258,85 +258,62 @@ section, .hero {
   color: #e0f7fa;
 }
 
-/* === RESPONSIVE DESIGN - VERSION MOBILE === */
+/* === CORRECTION DU DÉCALAGE SUR MOBILE === */
 @media screen and (max-width: 768px) {
-  
-  /* TITRES */
-  h1 {
-    font-size: 1.8rem;
+
+  body {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    overflow-x: hidden;
   }
 
-  h2 {
-    font-size: 1.1rem;
+  header, nav, section, footer {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
   }
 
-  /* NAVIGATION */
+  /* Navigation mobile */
   nav ul {
-    flex-direction: column;
-    gap: 15px;
-    padding: 10px 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
   }
 
-  /* SECTION ACCUEIL */
-  .hero {
-    padding: 60px 15px;
-  }
-
-  .photo-profil {
-    width: 120px;
-    height: 120px;
-  }
-
-  .accroche {
-    font-size: 0.9rem;
-    padding: 0 10px;
-  }
-
-  .boutons a {
+  nav li {
+    width: 100%;
     display: block;
-    width: 80%;
+  }
+
+  /* Boutons et contenu */
+  .btn, .btn-secondaire, .btn-cv {
+    display: block;
+    width: 90%;
     margin: 10px auto;
   }
 
-  /* SECTION COMPÉTENCES */
-  #competences ul li {
-    font-size: 0.9rem;
-    padding: 10px;
+  .accroche, p {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 95%;
   }
 
-  /* SECTION PROJETS */
+  /* Cartes projets */
   .projects {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    justify-items: center;
+    text-align: center;
   }
 
   .project-card {
-    max-width: 100%;
-    margin: auto;
-    padding: 1.2rem;
+    text-align: center;
   }
 
-  .project-card h3 {
-    font-size: 1rem;
-  }
-
-  .project-card p {
-    font-size: 0.85rem;
-  }
-
-  /* BOUTONS */
-  .btn, .btn-secondaire, .btn-cv {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-
-  /* ESPACEMENT DES SECTIONS */
-  section {
-    padding: 50px 10px;
-  }
-
-  footer {
-    font-size: 0.8rem;
-    padding: 15px 5px;
+  /* Empêcher tout dépassement horizontal */
+  html, body {
+    overflow-x: hidden;
   }
 }
