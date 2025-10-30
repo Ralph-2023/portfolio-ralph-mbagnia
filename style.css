@@ -477,3 +477,21 @@ section, .hero {
   opacity: 1;
   box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
 }
+
+/* === APPARITION FLUIDE ET LUMINEUSE DES CARTES ET IMAGES === */
+
+/* État initial (invisible au chargement) */
+.project-card,
+.carousel img {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out, box-shadow 0.5s ease;
+}
+
+/* Quand l'élément devient visible */
+.project-card.active,
+.carousel img.active {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+}
