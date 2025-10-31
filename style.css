@@ -516,3 +516,46 @@ section, .hero {
   display: block;
   width: 100%;
 }
+
+/* Harmonisation des tailles du carrousel de certifications */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100%;
+  height: 240px; /* hauteur fixe du bloc */
+  margin: 0 auto 50px;
+  border-radius: 15px;
+  background-color: #0b0b0f; /* léger contraste */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  animation: defilement 45s linear infinite;
+}
+
+.carousel img {
+  width: 320px; /* largeur uniforme */
+  height: 200px; /* hauteur uniforme */
+  object-fit: cover; /* rogne légèrement pour garder la proportion */
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+/* Animation du défilement */
+@keyframes defilement {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
