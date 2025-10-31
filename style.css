@@ -508,3 +508,11 @@ section, .hero {
     gap: 15px;
   }
 }
+
+/* Correction : recentrer tous les titres de section */
+#competences h2,
+#contact h2 {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+}
